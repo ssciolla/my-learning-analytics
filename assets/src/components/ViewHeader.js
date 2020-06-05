@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import Typography from '@material-ui/core/Typography'
 
 function ViewHeader (props) {
@@ -29,9 +30,14 @@ function ViewHeader (props) {
   }
 
   return (
-    <Typography {...headerProps}>
-      {children}
-    </Typography>
+    <div>
+      <Helmet>
+        <title>{children} - My Learning Analytics</title>
+      </Helmet>
+      <Typography {...headerProps}>
+        {children}
+      </Typography>
+    </div>
   )
 }
 
