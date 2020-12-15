@@ -26,9 +26,7 @@ function ProgressBarV2 (props) {
     submitted,
     percentWidth,
     height = 10,
-    margin = 0,
     lines = [],
-    floatTo = 'left',
     description
   } = props
 
@@ -59,8 +57,7 @@ function ProgressBarV2 (props) {
             width: `${percentWidth}%`,
             height: `${height}px`,
             position: 'relative',
-            margin: `${margin}px`,
-            float: floatTo
+            margin: 'auto'
           }}
         >
           {
