@@ -55,7 +55,11 @@ const styles = theme => ({
   },
   legendItem: {
     display: 'inline-block',
-    marginRight: '10px'
+    marginRight: '14px'
+  },
+  legendItemLabel: {
+    display: 'inline',
+    marginLeft: '6px'
   },
   graded: {
     background: theme.palette.secondary.main
@@ -221,15 +225,15 @@ function AssignmentPlanningV2 (props) {
                           <Typography variant='h6' gutterBottom>Assignment Status</Typography>
                           <div className={classes.legendItem}>
                             <div className={classes.graded + ' ' + classes.assignStatus} />
-                            <Typography display='inline' style={{ padding: '6px' }}>{assignmentStatus.GRADED}</Typography>
+                            <Typography className={classes.legendItemLabel}>{assignmentStatus.GRADED}</Typography>
                           </div>
                           <div className={classes.legendItem}>
                             <div className={classes.ungraded + ' ' + classes.assignStatus} />
-                            <Typography display='inline' style={{ padding: '6px' }}>{assignmentStatus.SUBMITTED}</Typography>
+                            <Typography className={classes.legendItemLabel}>{assignmentStatus.SUBMITTED}</Typography>
                           </div>
                           <div className={classes.legendItem}>
                             <div className={classes.unsubmitted + ' ' + classes.assignStatus} />
-                            <Typography display='inline' style={{ padding: '6px' }}>{assignmentStatus.UNSUBMITTED}</Typography>
+                            <Typography className={classes.legendItemLabel}>{assignmentStatus.UNSUBMITTED}</Typography>
                           </div>
                         </Grid>
                       </Grid>
